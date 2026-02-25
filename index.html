@@ -107,67 +107,10 @@ footer{
     z-index:2;
 }
 
-/* SMOKE EFFECT */
-.smoke-container{
-    position:fixed;
-    bottom:0;
-    left:50%;
-    transform:translateX(-50%);
-    pointer-events:none;
-    z-index:0;
-}
-
-.smoke{
-    position:absolute;
-    bottom:0;
-    width:200px;
-    height:200px;
-    background:radial-gradient(circle, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.1) 40%, transparent 10%);
-    border-radius:50%;
-    animation:smokeRise 60s infinite ease-in;
-    filter:blur(0px);
-    opacity:0;
-}
-
-.smoke:nth-child(1){
-    left:-60px;
-    animation-delay:0s;
-}
-
-.smoke:nth-child(2){
-    left:-20px;
-    animation-delay:4s;
-}
-
-.smoke:nth-child(3){
-    left:20px;
-    animation-delay:8s;
-}
-
-@keyframes smokeRise{
-    0%{
-        transform:translateY(0) scale(0.8);
-        opacity:0.4;
-    }
-    50%{
-        opacity:0.25;
-    }
-    100%{
-        transform:translateY(-110vh) scale(1.8);
-        opacity:0;
-    }
-}
 </style>
 </head>
 
 <body>
-
-<!-- Smoke -->
-<div class="smoke-container">
-    <div class="smoke"></div>
-    <div class="smoke"></div>
-    <div class="smoke"></div>
-</div>
 
 <!-- Hero -->
 <section class="hero">
